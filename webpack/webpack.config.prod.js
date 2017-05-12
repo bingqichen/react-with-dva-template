@@ -21,11 +21,10 @@ module.exports = merge(webpackBaseConfig, {
       allChunks: true
     }),
     new webpack.optimize.UglifyJsPlugin({
-      minimize: false,
       compress: {
         warnings: false,
         drop_debugger: true,
-        drop_console: true
+        drop_console: false
       }
     }),
     new webpack.LoaderOptionsPlugin({
