@@ -1,5 +1,5 @@
 {
-  "name": "react-with-dva",
+  "name": "react-with-dva-template",
   "version": "1.0.0",
   "description": "react && dva project template",
   "main": "src/app.js",
@@ -9,10 +9,6 @@
     "release": "NODE_ENV='production' BETA=false webpack --progress --display-error-details --color --profile --config ./webpack/webpack.config.prod.js",
     "dll": "webpack --progress --display-error-details --color --profile --config ./webpack/webpack.config.dll.js"
   },
-  "keywords": [
-    "react",
-    "template"
-  ],
   "author": "BingqiChen",
   "license": "MIT",
   "dependencies": {
