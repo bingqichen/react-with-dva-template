@@ -34,3 +34,9 @@
 - dva资料：
   - https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/tutorial/01-%E6%A6%82%E8%A6%81.md
   - https://github.com/dvajs/dva/blob/master/docs/API_zh-CN.md
+
+## 关于项目的一些配置项
+- `webpack`的配置：
+  - `webpack.config.js`是基础配置，一般情况下不需要更改；
+  - 在`prod`配置中，`publicPath`属性区分了测试和线上环境的静态资源引用路径，请按需替换；
+  - `dll`配置用来生成一个单独的、平时不需要更改的`vendor.min.js`，在业务代码之前引入。
