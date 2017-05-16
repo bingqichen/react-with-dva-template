@@ -27,7 +27,7 @@
 
 接口服务都放在`services`中，再由`model`来调用。
 
-`model`中`state`的设计。
+合理的设计`model`中的`state`。
 
 ## 其他
 - 启用`editorconfig`来让编辑器自动读取格式化文件；启用`eslint`。
