@@ -2,7 +2,8 @@
 项目模版-react&&dva
 
 ## 技术选型
-依然采用`react`全家桶，并尝试引入 [dva](https://github.com/dvajs/dva) 简化`redux`的使用。
+依然采用`react`全家桶，并尝试引入 [dva](https://github.com/dvajs/dva) 简化`redux`的使用。  
+UI 框架选择了棒的不行的 [ant design](https://ant.design/index-cn)。
 
 ## 目录结构
 大体上保持了`dva`官方推荐的目录结构。
@@ -27,7 +28,7 @@
 
 接口服务都放在`services`中，再由`model`来调用。
 
-合理的设计`model`中的`state`。
+合理的设计`model`中的`state`。
 
 ## 其他
 - 启用`editorconfig`来让编辑器自动读取格式化文件；启用`eslint`。

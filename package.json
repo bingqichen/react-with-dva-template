@@ -12,6 +12,7 @@
   "author": "BingqiChen",
   "license": "MIT",
   "dependencies": {
+    "antd": "^2.10.1",
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.23.0",
     "classnames": "^2.2.5",
