@@ -8,11 +8,14 @@ import router from './router';
 const opts = {
   history: browserHistory,
   initialState: {},
-  onAction: createLogger(),
   onError(err) {
     console.log(err);
   }
 };
+
+if (process.env.NODE_ENV === 'production') {
+  opts.onAction = createLogger();
+}
 
 const app = createApp(opts);
 app.router(router);
