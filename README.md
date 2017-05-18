@@ -3,7 +3,8 @@
 
 ## 技术选型
 依然采用`react`全家桶，并尝试引入 [dva](https://github.com/dvajs/dva) 简化`redux`的使用。  
-UI 框架选择了棒的不行的 [ant design](https://ant.design/index-cn)。
+UI 框架选择了棒的不行的 [ant design](https://ant.design/index-cn)。  
+数据请求库使用axios，当然可以选用其他。
 
 ## 目录结构
 大体上保持了`dva`官方推荐的目录结构。
