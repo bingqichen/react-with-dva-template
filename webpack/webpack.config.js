@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
+const { theme } = require(path.join(__dirname, '../package.json'));
+
 module.exports = {
   module: {
     rules: [
@@ -75,7 +77,12 @@ module.exports = {
                 ]
               }
             },
-            'less-loader'
+            {
+              loader: 'less-loader',
+              options: {
+                modifyVars: theme
+              }
+            }
           ]
         })
       },
