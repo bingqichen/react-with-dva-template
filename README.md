@@ -43,7 +43,7 @@ yarn:
   yarn dll
   yarn dev
 ```
-在启动`dev`任务之前请务必先运行一次`dll`任务。
+在启动`dev`任务之前请务必先运行一次`dll`任务。关于`dll plugin`的详细资料可查看 [dll plugin](https://webpack.js.org/plugins/dll-plugin/)
 
 ## 其他
 - 启用`editorconfig`来让编辑器自动读取格式化文件；启用`eslint`。
