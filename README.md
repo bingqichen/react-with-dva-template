@@ -31,6 +31,20 @@ UI 框架选择了棒的不行的 [ant design](https://ant.design/index-cn)。
 
 合理的设计`model`中的`state`。
 
+## 使用
+```
+npm:
+  npm install
+  npm run dll
+  npm run dev
+  
+yarn:
+  yarn
+  yarn dll
+  yarn dev
+```
+在启动`dev`任务之前请务必先运行一次`dll`任务。
+
 ## 其他
 - 启用`editorconfig`来让编辑器自动读取格式化文件；启用`eslint`。
 - dva资料：
