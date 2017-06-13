@@ -25,7 +25,7 @@ UI 框架选择了棒的不行的 [ant design](https://ant.design/index-cn)。
 ```
 在组件的设计上，应该明确`components`和`routes`目录中的组件职责：
 - 保持`components`中的为纯组件([PureComponent](https://facebook.github.io/react/docs/react-api.html#react.purecomponent))，不直接通过`connect`订阅`model`上的数据，一般来说它所需要的数据都来源于`props`。
-- `routes`是页面纬度的组件，它的职责是绑定相关联的`model`数据，以数据容器的角色包含其它子组件。
+- `routes`是页面维度的组件，它的职责是绑定相关联的`model`数据，以数据容器的角色包含其它子组件。
 
 接口服务都放在`services`中，再由`model`来调用。
 
