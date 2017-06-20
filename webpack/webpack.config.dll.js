@@ -11,13 +11,13 @@ module.exports = {
     library: '[name]'
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
     new webpack.DllPlugin({
       path: path.join(__dirname, '../dist/vendor/manifest.json'),
       name: '[name]',
       context: __dirname
-    }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new webpack.optimize.UglifyJsPlugin({
       minimize: false,
@@ -26,6 +26,7 @@ module.exports = {
         drop_debugger: true,
         drop_console: true
       }
-    })
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin()
   ]
 };

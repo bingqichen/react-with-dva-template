@@ -103,7 +103,8 @@ module.exports = {
     new webpack.DllReferencePlugin({
       context: __dirname,
       manifest: require(path.join(__dirname, '../dist/vendor/manifest.json'))
-    })
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin()
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.less']
