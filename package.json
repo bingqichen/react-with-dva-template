@@ -1,6 +1,6 @@
 {
   "name": "react-with-dva-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react && dva project template",
   "main": "src/app.js",
   "scripts": {
@@ -12,15 +12,15 @@
   "author": "BingqiChen",
   "license": "MIT",
   "dependencies": {
-    "antd": "^2.11.0",
+    "antd": "^2.11.1",
     "axios": "^0.16.2",
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.23.0",
     "classnames": "^2.2.5",
     "dva": "^1.2.1",
     "dva-loading": "^0.2.1",
-    "react": "15.4.2",
-    "react-dom": "15.4.2"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
@@ -46,7 +46,7 @@
     "react-hot-loader": "3.0.0-beta.7",
     "redux-logger": "^3.0.6",
     "style-loader": "^0.18.2",
-    "webpack": "^2.6.1",
+    "webpack": "^3.0.0",
     "webpack-browser-plugin": "^1.0.20",
     "webpack-dashboard": "^0.4.0",
     "webpack-dev-server": "^2.4.5",
