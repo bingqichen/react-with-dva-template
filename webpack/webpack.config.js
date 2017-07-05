@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const HappyPack = require('happypack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 
 const { theme } = require(path.join(__dirname, '../package.json'));
 
@@ -10,80 +10,21 @@ module.exports = {
     rules: [
       {
         test: /\.js[x]?$/,
-        use: 'babel-loader',
+        use: ['happypack/loader?id=jsx'],
         exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        // use: [
-        //   'style-loader',
-        //   'css-loader?importLoaders=1',
-        //   {
-        //     loader: 'postcss-loader',
-        //     options: {
-        //       plugins: [
-        //         autoprefixer({
-        //           browsers: ['> 1%', 'ie >= 9']
-        //         })
-        //       ]
-        //     }
-        //   }
-        // ]
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            'css-loader?importLoaders=1',
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: [
-                  autoprefixer({
-                    browsers: ['> 1%', 'ie >= 9']
-                  })
-                ]
-              }
-            }
-          ]
+          use: ['happypack/loader?id=css']
         })
       },
       {
         test: /\.less$/,
-        // use: [
-        //   'style-loader',
-        //   'css-loader?importLoaders=1',
-        //   {
-        //     loader: 'postcss-loader',
-        //     options: {
-        //       plugins: [
-        //         autoprefixer({
-        //           browsers: ['> 1%', 'ie >= 9']
-        //         })
-        //       ]
-        //     }
-        //   },
-        //   'less-loader'
-        // ]
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            'css-loader?importLoaders=1',
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: [
-                  autoprefixer({
-                    browsers: ['> 1%', 'ie >= 9']
-                  })
-                ]
-              }
-            },
-            {
-              loader: 'less-loader',
-              options: {
-                modifyVars: theme
-              }
-            }
-          ]
+          use: ['happypack/loader?id=less']
         })
       },
       {
@@ -104,7 +45,34 @@ module.exports = {
       context: __dirname,
       manifest: require(path.join(__dirname, '../dist/vendor/manifest.json'))
     }),
-    new webpack.optimize.ModuleConcatenationPlugin()
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new HappyPack({
+      id: 'jsx',
+      threads: 4,
+      loaders: ['babel-loader']
+    }),
+    new HappyPack({
+      id: 'css',
+      threads: 4,
+      loaders: [
+        'css-loader?importLoaders=1',
+        'postcss-loader'
+      ]
+    }),
+    new HappyPack({
+      id: 'less',
+      threads: 4,
+      loaders: [
+        'css-loader?importLoaders=1',
+        'postcss-loader',
+        {
+          loader: 'less-loader',
+          options: {
+            modifyVars: theme
+          }
+        }
+      ]
+    })
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.less']

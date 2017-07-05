@@ -1,6 +1,6 @@
 {
   "name": "react-with-dva-template",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "react && dva project template",
   "main": "src/app.js",
   "scripts": {
@@ -40,6 +40,7 @@
     "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "happypack": "^4.0.0-beta.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
     "postcss-loader": "^2.0.6",
