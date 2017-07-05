@@ -1,10 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const merge = require('webpack-merge');
 const Dashboard = require('webpack-dashboard');
 const DashboardPlugin = require('webpack-dashboard/plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackBrowserPlugin = require('webpack-browser-plugin');
-const merge = require('webpack-merge');
 
 const dashboard = new Dashboard();
 
