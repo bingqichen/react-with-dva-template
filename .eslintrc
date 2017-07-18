@@ -2,7 +2,6 @@
   "root": true,
   "plugins": ["react"],
   "extends": "airbnb",
-  "parser": "esprima",
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2017,
