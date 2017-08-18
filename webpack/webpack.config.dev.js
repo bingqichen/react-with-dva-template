@@ -8,7 +8,7 @@ const WebpackBrowserPlugin = require('webpack-browser-plugin');
 
 const dashboard = new Dashboard();
 
-const webpackBaseConfig = require('./webpack.config');
+const webpackBaseConfig = require('./webpack.config')();
 
 module.exports = merge(webpackBaseConfig, {
   devtool: 'eval',
