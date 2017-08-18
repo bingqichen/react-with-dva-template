@@ -1,3 +1,5 @@
+import axios from './axios';
+
 const helper = () => {
   console.log('这是一个帮助函数');
 };
@@ -7,6 +9,7 @@ const helper2 = () => {
 };
 
 export {
+  axios,
   helper,
   helper2
 };
