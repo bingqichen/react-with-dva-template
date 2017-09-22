@@ -6714,7 +6714,7 @@ webpack-browser-plugin@^1.0.20:
     browser-sync "^2.13.0"
     opn "^4.0.2"
 
-webpack-dashboard@^1.0.0-5:
+webpack-dashboard@^1.0.0-7:
   version "1.0.0-7"
   resolved "http://registry.npm.taobao.org/webpack-dashboard/download/webpack-dashboard-1.0.0-7.tgz#2fcc663a929e04f3091aa0ceda0c4171a9e9042f"
   dependencies:
