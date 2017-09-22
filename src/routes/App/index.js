@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
+import { Link, Route, Switch } from 'dva/router';
 import { Button } from 'antd';
+
+import Item from '../Item';
 
 import Avatar from '~/avatar';
 
@@ -23,6 +26,7 @@ class App extends Component {
 
   render() {
     const { show } = this.props.appState;
+    console.log(this.props)
 
     return (
       <div className="app-wrap">
@@ -35,6 +39,11 @@ class App extends Component {
               src="//camo.githubusercontent.com/7c73f8cfbb808b9a451dac7d9ff5cbc2b4883419/68747470733a2f2f7a6f732e616c697061796f626a656374732e636f6d2f726d73706f7274616c2f70736167534356484f4b515671714e6a6a4d64662e6a7067"
             /> : null
         }
+
+        <Link to="/id">go to id</Link>
+        <Switch>
+          <Route path="/id" component={Item} />
+        </Switch>
       </div>
     );
   }

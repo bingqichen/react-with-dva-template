@@ -1,12 +1,12 @@
 import 'babel-polyfill';
-import { browserHistory } from 'dva/router';
+import createHistory from 'history/createBrowserHistory';
 import { createLogger } from 'redux-logger';
 
 import createApp from './createApp';
 import router from './router';
 
 const opts = {
-  history: browserHistory,
+  history: createHistory(),
   initialState: {},
   onError(err) {
     console.log(err);
