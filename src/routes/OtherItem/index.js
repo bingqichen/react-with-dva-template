@@ -4,9 +4,8 @@ import { connect } from 'dva';
 class OtherItem extends Component {
 
   render() {
-
     return (
-      <div className="item-wrap">
+      <div className="other-item-wrap">
         this is a other children item
       </div>
     );

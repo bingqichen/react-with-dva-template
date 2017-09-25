@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    vendor: ['babel-polyfill', 'react', 'react-dom', 'dva'],
+    vendor: ['babel-polyfill', 'react', 'react-dom', 'dva', 'dva-loading'],
   },
   output: {
     path: path.join(__dirname, '../dist/vendor/'),

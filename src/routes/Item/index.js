@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 
-export default class Item extends Component {
+class Item extends Component {
 
   render() {
-
     return (
       <div className="item-wrap">
         this is a children item
@@ -13,8 +12,8 @@ export default class Item extends Component {
   }
 }
 
-// const mapStateToProps = state => ({
+const mapStateToProps = state => ({
+  appState: state.app
+});
 
-// });
-
-// export default connect(mapStateToProps)(Item);
+export default connect(mapStateToProps)(Item);

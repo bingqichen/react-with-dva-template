@@ -1,6 +1,10 @@
 # react-with-dva-template
 项目模版-react&&dva
 
+## 更新日志
+2017/09/25
+升级[`dva@2`](https://github.com/sorrycc/blog/issues/48)。
+
 ## 技术选型
 依然采用`react`全家桶，并尝试引入 [dva](https://github.com/dvajs/dva) 简化`redux`的使用。  
 UI 框架选择了棒的不行的 [ant design](https://ant.design/index-cn)。  

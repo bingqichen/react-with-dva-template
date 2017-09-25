@@ -12,7 +12,7 @@
   "author": "BingqiChen",
   "license": "MIT",
   "dependencies": {
-    "antd": "^2.13.2",
+    "antd": "^2.13.3",
     "axios": "^0.16.2",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.25.0",
@@ -20,7 +20,6 @@
     "dva": "^2.0.3",
     "dva-loading": "^1.0.2",
     "history": "^4.7.2",
-    "prop-types": "^15.5.10",
     "qs": "^6.5.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
@@ -43,7 +42,7 @@
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "happypack": "^4.0.0",
