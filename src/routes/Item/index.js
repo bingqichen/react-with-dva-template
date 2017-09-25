@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 
-class Item extends Component {
+export default class Item extends Component {
 
   render() {
 
@@ -13,8 +13,8 @@ class Item extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+// const mapStateToProps = state => ({
 
-});
+// });
 
-export default connect(mapStateToProps)(Item);
+// export default connect(mapStateToProps)(Item);
