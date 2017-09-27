@@ -4182,8 +4182,8 @@ moment@2.x, moment@^2.18.1:
   resolved "http://registry.npm.taobao.org/moment/download/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
 most@^1.6.1:
-  version "1.7.1"
-  resolved "http://registry.npm.taobao.org/most/download/most-1.7.1.tgz#5645aea680bc2ae24fe0eb2495dbb4797e436b75"
+  version "1.7.2"
+  resolved "http://registry.npm.taobao.org/most/download/most-1.7.2.tgz#3f8b8bf0e4410ad8490b3599ea3777fca964a1c4"
   dependencies:
     "@most/multicast" "^1.2.5"
     "@most/prelude" "^1.4.0"
