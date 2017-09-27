@@ -3,7 +3,7 @@
 
 ## 更新日志
 2017/09/25
-升级[`dva@2`](https://github.com/sorrycc/blog/issues/48)。
+升级[`dva@2`](https://github.com/sorrycc/blog/issues/48)。dva@1.x请转移至[该分支](https://github.com/bingqichen/react-with-dva-template/tree/dva%401.x)
 
 ## 技术选型
 依然采用`react`全家桶，并尝试引入 [dva](https://github.com/dvajs/dva) 简化`redux`的使用。  
