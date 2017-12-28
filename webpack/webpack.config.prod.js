@@ -12,7 +12,7 @@ module.exports = merge(webpackBaseConfig, {
   output: {
     path: path.join(__dirname, '../dist/'),
     filename: 'js/[name].js',
-    publicPath: process.env.BETA ? '//your_cdn_path/beta/project_name/' : '//your_cdn_path/release/project_name/'
+    publicPath: process.env.BETA === 'true' ? '//your_cdn_path/beta/project_name/' : '//your_cdn_path/release/project_name/'
   },
   plugins: [
     new ExtractTextPlugin({
