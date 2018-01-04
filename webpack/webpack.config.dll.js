@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -27,6 +28,7 @@ module.exports = {
         drop_console: true
       }
     }),
-    new webpack.optimize.ModuleConcatenationPlugin()
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new CleanWebpackPlugin(['dist/vendor'], { root: path.resolve() })
   ]
 };

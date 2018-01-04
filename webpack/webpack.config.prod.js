@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
 
@@ -30,6 +31,7 @@ module.exports = merge(webpackBaseConfig, {
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false
-    })
+    }),
+    new CleanWebpackPlugin(['dist/css', 'dist/js'], { root: path.resolve() })
   ]
 });
