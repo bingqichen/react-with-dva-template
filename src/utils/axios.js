@@ -3,9 +3,9 @@
 import axios from 'axios';
 import { message } from 'antd';
 
-import { requestBaseURL } from '../config';
+import { requestBaseUrl } from '../config';
 
-axios.defaults.baseURL = requestBaseURL;
+axios.defaults.baseURL = requestBaseUrl;
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.interceptors.request.use(config => ({
