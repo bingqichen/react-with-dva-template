@@ -1,1 +1,1 @@
-import { axios } from '../util';
+import { axios } from '../utils';
