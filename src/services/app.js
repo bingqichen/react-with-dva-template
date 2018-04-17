@@ -1,1 +1,1 @@
-import { requestBaseUrl } from '../config';
+import { axios } from '../utils';
