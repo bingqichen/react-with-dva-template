@@ -12,8 +12,8 @@
   "author": "BingqiChen",
   "license": "MIT",
   "dependencies": {
-    "antd": "^3.1.0",
-    "axios": "^0.17.1",
+    "antd": "^3.4.1",
+    "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "classnames": "^2.2.5",
@@ -21,8 +21,8 @@
     "dva-loading": "^1.0.4",
     "history": "^4.7.2",
     "qs": "^6.5.1",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2"
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.4",
@@ -58,6 +58,7 @@
     "webpack-dashboard": "^1.0.2",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1",
+    "webpack-version-plugin": "^2.0.1",
     "webstorm-disable-index": "^1.2.0"
   },
   "theme": {
