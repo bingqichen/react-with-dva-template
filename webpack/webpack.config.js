@@ -3,7 +3,8 @@ const webpack = require('webpack');
 const HappyPack = require('happypack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const { theme } = require(path.join(__dirname, '../package.json'));
+const { theme } = require('../package.json');
+const manifest = require('../dist/vendor/manifest.json');
 
 module.exports = () => {
   const config = {
@@ -39,14 +40,10 @@ module.exports = () => {
       ]
     },
     plugins: [
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-      }),
       new webpack.DllReferencePlugin({
         context: __dirname,
-        manifest: require(path.join(__dirname, '../dist/vendor/manifest.json'))
+        manifest
       }),
-      new webpack.optimize.ModuleConcatenationPlugin(),
       new HappyPack({
         id: 'jsx',
         threads: 4,
