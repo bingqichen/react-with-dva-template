@@ -1,4 +1,3 @@
-const path = require('path');
 const webpack = require('webpack');
 const HappyPack = require('happypack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
