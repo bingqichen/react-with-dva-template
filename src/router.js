@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Switch, Link } from 'dva/router';
+import { BrowserRouter as Router, Route, Switch, Link } from 'dva/router';
 import dynamic from 'dva/dynamic';
 import { Menu } from 'antd';
 
@@ -7,7 +7,7 @@ import appModel from './models/app';
 
 import './style.less';
 
-export default ({ history, app }) => {
+export default ({ app }) => {
   const App = dynamic({
     app,
     models: () => [appModel],
@@ -27,7 +27,7 @@ export default ({ history, app }) => {
   });
 
   return (
-    <Router history={history}>
+    <Router>
       <div className="root-wrap">
 
         {/* 菜单栏 */}

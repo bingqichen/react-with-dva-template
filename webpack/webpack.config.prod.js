@@ -1,9 +1,9 @@
 const path = require('path');
-// const webpack = require('webpack');
+const webpack = require('webpack');
+const merge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackVersionPlugin = require('webpack-version-plugin');
-const merge = require('webpack-merge');
 
 const webpackBaseConfig = require('./webpack.config')();
 
@@ -18,6 +18,9 @@ module.exports = merge(webpackBaseConfig, {
     publicPath: process.env.BETA === 'true' ? '//your_cdn_path/beta/project_name/' : '//your_cdn_path/release/project_name/'
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.BETA': JSON.stringify(process.env.BETA)
+    }),
     new ExtractTextPlugin({
       filename: 'css/[name].css',
       disable: false,

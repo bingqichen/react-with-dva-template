@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
+import { withRouter } from 'dva/router';
 
 class OtherItem extends Component {
 
@@ -16,4 +17,4 @@ const mapStateToProps = state => ({
   appState: state.app
 });
 
-export default connect(mapStateToProps)(OtherItem);
+export default connect(mapStateToProps)(withRouter(OtherItem));

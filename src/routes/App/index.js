@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
+import { withRouter } from 'dva/router';
 import { Button } from 'antd';
 
 import Avatar from '~/avatar';
@@ -44,4 +45,4 @@ const mapStateToProps = state => ({
   appState: state.app
 });
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(withRouter(App));
