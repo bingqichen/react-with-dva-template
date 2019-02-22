@@ -10,7 +10,6 @@
 UI 框架选择了棒的不行的 [ant design](https://ant.design/index-cn)。  
 数据请求库使用axios，当然可以选用其他。
 
-
 ## 目录结构
 大体上保持了`dva`官方推荐的目录结构。
 ```bash
